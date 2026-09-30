@@ -72,8 +72,8 @@
   }
   body {
     @apply bg-background font-sans text-foreground;
-    background-image: linear-gradient(oklch(0.78 0.17 205 / 0.06) 1px, transparent 1px), linear-gradient(90deg, oklch(0.78 0.17 205 / 0.06) 1px, transparent 1px), radial-gradient(circle at 50% -20%, oklch(0.35 0.12 220 / 0.22), transparent 48%);
-    background-size: 48px 48px, 48px 48px, auto;
+    background-image: radial-gradient(ellipse at 50% -18%, oklch(0.42 0.16 215 / 0.34), transparent 52%), radial-gradient(ellipse at 8% 28%, oklch(0.22 0.12 238 / 0.2), transparent 34%), radial-gradient(ellipse at 92% 72%, oklch(0.2 0.1 190 / 0.18), transparent 36%), linear-gradient(145deg, oklch(0.08 0.035 240), oklch(0.045 0.02 240) 52%, oklch(0.075 0.035 210));
+    background-attachment: fixed;
   }
   h1,
   h2,
