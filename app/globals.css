@@ -173,3 +173,29 @@
   @media (max-width: 640px) { .hud-team-hiit-ad { align-items: stretch; flex-direction: column; gap: 1rem; padding: 1.25rem; }.hud-team-hiit-logo-wrap { min-width: 0; border-right: 0; border-bottom: 1px solid color-mix(in oklab, var(--primary) 25%, transparent); padding: 0.25rem 0 1rem; }.hud-team-hiit-logo { max-height: 5rem; }.hud-team-hiit-copy { padding: 0; } }
   .hud-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); padding-bottom: 1rem; }.hud-section-heading h2 { margin-top: 0.45rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }.hud-link { font-size: 0.6rem; }
 @media (max-width: 767px) { .hud-orbit-panel { min-height: 16rem; border-left: 0; border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); }.hud-frame-top, .hud-frame-bottom { font-size: 0.47rem; }.hud-section-heading { align-items: start; flex-direction: column; } }
+
+/* Home remodelada: painel editorial inspirado no layout de referência, com azul Team HIIT. */
+.home-layout { display: flex; flex-direction: column; gap: 2.5rem; padding-bottom: 4rem; }
+.home-hero { overflow: hidden; }
+.home-hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(24rem, 0.95fr); min-height: 25rem; }
+.home-hero .hud-hero-main { display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem, 5vw, 4.75rem); }
+.home-hero .hud-hero-main h1 { margin: 1.25rem 0; font-size: clamp(2.65rem, 5.5vw, 4.8rem); line-height: 0.98; letter-spacing: -0.06em; }
+.home-hero .hud-hero-main h1 strong { color: var(--primary); }
+.home-hero .hud-button { align-self: flex-start; border-radius: 999px; background: var(--primary); color: var(--primary-foreground); box-shadow: 0 0 24px color-mix(in oklab, var(--primary) 22%, transparent); }
+.home-hero .hud-button:hover { background: color-mix(in oklab, var(--primary) 82%, white); }
+.hero-trust { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.75rem; color: var(--muted-foreground); font-size: 0.65rem; }
+.hero-trust span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.hero-trust span::before { width: 1.5rem; height: 1.5rem; border: 1px solid color-mix(in oklab, var(--primary) 55%, transparent); border-radius: 50%; content: '✓'; color: var(--primary); text-align: center; line-height: 1.4rem; }
+.hero-trust b { color: var(--foreground); }
+.hero-visual { position: relative; min-height: 25rem; overflow: hidden; border-left: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); background: radial-gradient(ellipse at 42% 45%, color-mix(in oklab, var(--primary) 25%, transparent), transparent 35%), linear-gradient(135deg, transparent 0 42%, color-mix(in oklab, var(--primary) 7%, transparent) 42% 43%, transparent 43%), repeating-linear-gradient(90deg, transparent 0 2rem, color-mix(in oklab, var(--primary) 5%, transparent) 2rem 2.05rem); }
+.hero-silhouette { position: absolute; top: 8%; left: 24%; width: 13rem; height: 25rem; border-radius: 48% 52% 35% 40%; background: linear-gradient(90deg, transparent 5%, color-mix(in oklab, var(--foreground) 10%, transparent) 35%, color-mix(in oklab, var(--foreground) 30%, transparent) 52%, transparent 78%); filter: blur(7px); opacity: 0.75; transform: rotate(6deg); }
+.hero-silhouette::before { position: absolute; top: -3rem; left: 4rem; width: 5rem; height: 6rem; border-radius: 48%; background: color-mix(in oklab, var(--foreground) 25%, transparent); content: ''; filter: blur(8px); }
+.hero-silhouette span { position: absolute; top: 1rem; right: 3rem; width: 3px; height: 20rem; background: var(--primary); box-shadow: 0 0 18px var(--primary); transform: rotate(9deg); }
+.hero-data-card { position: absolute; right: 8%; display: flex; flex-direction: column; gap: 0.3rem; width: 10.5rem; border: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); background: color-mix(in oklab, var(--background) 78%, transparent); padding: 0.8rem; box-shadow: 0 10px 25px color-mix(in oklab, black 35%, transparent); backdrop-filter: blur(8px); }
+.hero-data-card b, .hero-data-card span { color: var(--muted-foreground); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.hero-data-card strong { color: var(--foreground); font-family: var(--font-heading); font-size: 1.5rem; }
+.hero-data-card strong small { color: var(--primary); font-size: 0.65rem; }
+.hero-data-card-top { top: 12%; }.hero-data-card-mid { top: 38%; }.hero-data-card-bottom { top: 65%; }
+.mini-bars { display: flex; align-items: end; gap: 0.22rem; height: 2rem; }.mini-bars i { width: 0.35rem; background: var(--primary); box-shadow: 0 0 7px color-mix(in oklab, var(--primary) 50%, transparent); }
+@media (max-width: 767px) { .home-hero-grid { grid-template-columns: 1fr; }.hero-visual { min-height: 20rem; border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); border-left: 0; }.hero-silhouette { left: 10%; transform: scale(0.8) rotate(6deg); transform-origin: top left; }.hero-data-card { right: 5%; }.hero-trust { gap: 0.7rem; }.home-hero .hud-hero-main h1 { font-size: clamp(2.6rem, 13vw, 4rem); } }
+@media (min-width: 768px) and (max-width: 1100px) { .home-hero-grid { grid-template-columns: 1fr 0.8fr; }.hero-data-card { right: 4%; width: 9rem; } }
