@@ -20,16 +20,15 @@ const featuredTools = tools.slice(0, 3)
 export default function Page() {
   return (
     <div className="flex flex-col gap-16 pb-16">
-      <section className="relative overflow-hidden border-b border-primary/15 bg-background/80">
-        <div className="pointer-events-none absolute -right-24 top-8 size-80 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+      <section className="relative overflow-hidden border-b border-primary/25 bg-background/75">
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_70%_40%,oklch(0.45_0.16_210/0.18),transparent_58%)]" aria-hidden="true" />
+        <div className="pointer-events-none absolute right-8 top-10 hidden h-64 w-64 rounded-full border border-primary/20 md:block" aria-hidden="true" />
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 lg:py-24">
-          <p className="flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-primary uppercase"><span className="size-2 rounded-full bg-primary shadow-[0_0_12px_oklch(0.82_0.19_132/0.8)]" aria-hidden="true" />Métrica Fit <span className="text-muted-foreground/70">/ 01</span></p>
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">Ferramentas Fitness Gratuitas</h1>
-          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Calculadoras gratuitas para calorias, nutrição, composição corporal, musculação e corrida — sem cadastro e com resultados fáceis de entender.
-          </p>
-          <Link href="/ferramentas/" className="inline-flex w-fit items-center gap-2 font-semibold text-primary hover:underline">
-            Ver todas as ferramentas
+          <p className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] text-primary uppercase"><span className="size-2 rounded-full bg-primary shadow-[0_0_16px_oklch(0.78_0.17_205/0.9)]" aria-hidden="true" />Sistema ativo <span className="text-muted-foreground/70">/ MF-01</span></p>
+          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-balance sm:text-6xl">Dados melhores.<br /><span className="text-primary">Treinos mais inteligentes.</span></h1>
+          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">Ferramentas de precisão para transformar seus dados em decisões melhores sobre calorias, composição corporal, musculação e corrida.</p>
+          <Link href="/ferramentas/" className="inline-flex w-fit items-center gap-3 border border-primary/50 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/20">
+            Acessar painel de ferramentas
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
