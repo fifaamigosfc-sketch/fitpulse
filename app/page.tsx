@@ -32,23 +32,21 @@ export default function Page() {
     <div className="home-layout">
       <section className="mx-auto w-full max-w-6xl px-4 pt-6 sm:px-6 lg:pt-8" aria-labelledby="hero-title">
         <div className="hud-frame home-hero">
-          <div className="hud-frame-top"><span>DADOS <b>+</b> TECNOLOGIA <b>+</b> PERFORMANCE</span><span>STATUS: <b>ONLINE</b></span></div>
           <div className="home-hero-grid">
             <div className="hud-hero-main">
-              <p className="hud-kicker">// MÉTRICAS PARA RESULTADOS REAIS</p>
+              <p className="hud-kicker">DADOS <b>+</b> TECNOLOGIA <b>+</b> PERFORMANCE</p>
               <h1 id="hero-title">Ferramentas Fitness<br /><strong>Gratuitas</strong></h1>
-              <p className="max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">Calcule, planeje e evolua com ferramentas baseadas em métricas reais. Mais precisão para os seus objetivos de saúde, treino e performance.</p>
+              <p className="max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">Calcule, planeje e evolua com nossas ferramentas baseadas em métricas reais. Mais precisão para os seus objetivos de saúde, treino e performance.</p>
               <Link href="/ferramentas/" className="hud-button">EXPLORAR FERRAMENTAS <ArrowRight className="size-4" aria-hidden="true" /></Link>
-              <div className="hero-trust"><span><b>11</b> calculadoras especializadas</span><span><b>100%</b> gratuito e seguro</span><span><b>∞</b> evolução contínua</span></div>
+              <div className="hero-trust"><span><b>11</b> calculadoras especializadas</span><span><b>100%</b> gratuito e seguro</span><span><b>RESULTADOS</b> instantâneos</span></div>
             </div>
             <div className="hero-visual" aria-label="Painel visual de métricas fitness">
               <div className="hero-silhouette" aria-hidden="true"><span /></div>
-              <div className="hero-data-card hero-data-card-top"><b>COMPOSIÇÃO</b><strong>78%</strong><span>corporal</span></div>
+              <div className="hero-data-card hero-data-card-top"><b>COMPOSIÇÃO CORPORAL</b><strong>78%</strong><span>composição estimada</span></div>
               <div className="hero-data-card hero-data-card-mid"><b>PERFORMANCE</b><div className="mini-bars">{Array.from({ length: 12 }, (_, i) => <i key={i} style={{ height: `${25 + i * 5}%` }} />)}</div></div>
               <div className="hero-data-card hero-data-card-bottom"><b>TDEE</b><strong>2.450 <small>kcal</small></strong><span>gasto energético diário</span></div>
             </div>
           </div>
-          <div className="hud-frame-bottom"><span>PRECISION / CLARITY / PROGRESS</span><span>MF-01</span></div>
         </div>
       </section>
 
