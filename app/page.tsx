@@ -50,10 +50,12 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-6xl gap-3 px-4 sm:px-6 md:grid-cols-3" aria-label="Resumo do sistema">
-        <HudPanel label="CALORIAS DIÁRIAS"><div className="hud-metric"><strong>2.240</strong><span>kcal estimadas</span></div><div className="hud-bars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div></HudPanel>
-        <HudPanel label="PESO ATUAL"><div className="hud-metric"><strong>68,4</strong><span>kg registrados</span></div><div className="hud-line" aria-hidden="true"><span style={{ width: '72%' }} /></div><p>Progresso consistente <b>+12%</b></p></HudPanel>
-        <HudPanel label="STATUS DO SISTEMA"><div className="hud-status"><span className="hud-status-ring" aria-label="98 por cento">98</span><div><strong>EM EVOLUÇÃO</strong><p>Todos os sistemas ativos</p></div></div><div className="hud-scanline" aria-hidden="true" /></HudPanel>
+      <section className="mx-auto w-full max-w-6xl px-4 sm:px-6" aria-label="Espaço publicitário">
+        <div className="hud-ad-slot">
+          <span className="hud-ad-label">PUBLICIDADE</span>
+          <p>Espaço reservado para anúncio</p>
+          <span className="hud-ad-size">728 × 90</span>
+        </div>
       </section>
 
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6" aria-labelledby="principais-ferramentas">

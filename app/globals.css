@@ -154,5 +154,13 @@
 .hud-panel p { margin-top: 0.55rem; }.hud-panel p b { color: var(--primary); }
 .hud-status { display: flex; align-items: center; gap: 0.9rem; margin-top: 1rem; }.hud-status strong { font-family: var(--font-heading); font-size: 0.75rem; letter-spacing: 0.08em; }.hud-status p { margin-top: 0.25rem; font-size: 0.6rem; }.hud-status-ring { display: grid; place-items: center; width: 3.6rem; height: 3.6rem; border: 2px solid var(--primary); border-radius: 50%; color: var(--primary); font-family: var(--font-heading); font-size: 1.1rem; box-shadow: 0 0 14px color-mix(in oklab, var(--primary) 30%, transparent); }
 .hud-scanline { height: 1px; margin-top: 1rem; background: var(--primary); box-shadow: 0 -5px 0 color-mix(in oklab, var(--primary) 25%, transparent), 0 5px 0 color-mix(in oklab, var(--primary) 15%, transparent); }
-.hud-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); padding-bottom: 1rem; }.hud-section-heading h2 { margin-top: 0.45rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }.hud-link { font-size: 0.6rem; }
+  .hud-ad-slot { position: relative; display: grid; min-height: 7rem; place-items: center; overflow: hidden; border: 1px dashed color-mix(in oklab, var(--primary) 35%, transparent); background: color-mix(in oklab, var(--background) 94%, var(--primary) 6%); color: var(--muted-foreground); text-align: center; }
+  .hud-ad-slot::before, .hud-ad-slot::after { position: absolute; content: ''; pointer-events: none; }
+  .hud-ad-slot::before { inset: 0; background: linear-gradient(115deg, transparent 20%, color-mix(in oklab, var(--primary) 5%, transparent) 50%, transparent 80%); }
+  .hud-ad-slot::after { inset: 0.35rem; border: 1px solid color-mix(in oklab, var(--primary) 10%, transparent); }
+  .hud-ad-slot p, .hud-ad-label, .hud-ad-size { position: relative; z-index: 1; }
+  .hud-ad-slot p { margin: 0; font-family: var(--font-heading); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  .hud-ad-label, .hud-ad-size { position: absolute; top: 0.7rem; color: color-mix(in oklab, var(--primary) 75%, var(--muted-foreground)); font-family: var(--font-heading); font-size: 0.5rem; letter-spacing: 0.16em; }
+  .hud-ad-label { left: 0.8rem; }.hud-ad-size { right: 0.8rem; }
+  .hud-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); padding-bottom: 1rem; }.hud-section-heading h2 { margin-top: 0.45rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }.hud-link { font-size: 0.6rem; }
 @media (max-width: 767px) { .hud-orbit-panel { min-height: 16rem; border-left: 0; border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); }.hud-frame-top, .hud-frame-bottom { font-size: 0.47rem; }.hud-section-heading { align-items: start; flex-direction: column; } }
