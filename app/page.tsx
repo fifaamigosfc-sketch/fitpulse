@@ -51,7 +51,11 @@ export default function Page() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 sm:px-6" aria-labelledby="team-hiit-ad-title">
-        <div className="hud-ad-slot hud-team-hiit-ad">
+        <a
+          href="https://teamhiit.com.br"
+          className="hud-ad-slot hud-team-hiit-ad"
+          aria-label="Conheça o Team HIIT — Entre em forma do seu jeito"
+        >
           <div className="hud-team-hiit-copy">
             <span className="hud-ad-label">APRESENTA</span>
             <p className="hud-team-hiit-name">TEAM <strong>HIIT</strong></p>
@@ -63,7 +67,7 @@ export default function Page() {
             <b>SEU TREINO</b>
             <span className="hud-team-hiit-arrow">→</span>
           </div>
-        </div>
+        </a>
       </section>
 
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6" aria-labelledby="principais-ferramentas">
