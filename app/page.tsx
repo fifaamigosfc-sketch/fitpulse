@@ -56,16 +56,17 @@ export default function Page() {
           className="hud-ad-slot hud-team-hiit-ad"
           aria-label="Conheça o Team HIIT — Entre em forma do seu jeito"
         >
+          <div className="hud-team-hiit-logo-wrap">
+            <img
+              src="/team-hiit-logo.png"
+              alt="Team HIIT"
+              className="hud-team-hiit-logo"
+            />
+          </div>
           <div className="hud-team-hiit-copy">
-            <span className="hud-ad-label">APRESENTA</span>
-            <p className="hud-team-hiit-name">TEAM <strong>HIIT</strong></p>
             <h2 id="team-hiit-ad-title">Entre em forma do seu jeito.</h2>
             <p className="hud-team-hiit-description">Treinos rápidos, intensos e adaptados à sua rotina.</p>
-          </div>
-          <div className="hud-team-hiit-action" aria-hidden="true">
-            <span>SEU RITMO</span>
-            <b>SEU TREINO</b>
-            <span className="hud-team-hiit-arrow">→</span>
+            <span className="hud-team-hiit-cta">CONHEÇA O APP <span aria-hidden="true">→</span></span>
           </div>
         </a>
       </section>

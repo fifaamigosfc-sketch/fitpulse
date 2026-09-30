@@ -162,15 +162,14 @@
   .hud-ad-slot p { margin: 0; font-family: var(--font-heading); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; }
   .hud-ad-label, .hud-ad-size { position: absolute; top: 0.7rem; color: color-mix(in oklab, var(--primary) 75%, var(--muted-foreground)); font-family: var(--font-heading); font-size: 0.5rem; letter-spacing: 0.16em; }
   .hud-ad-label { left: 0.8rem; }.hud-ad-size { right: 0.8rem; }
-  .hud-team-hiit-ad { display: flex; min-height: 8.5rem; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.75rem 2rem; text-align: left; background: radial-gradient(circle at 78% 50%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 28%), linear-gradient(105deg, color-mix(in oklab, var(--background) 90%, var(--primary) 10%), color-mix(in oklab, var(--background) 98%, var(--primary) 2%)); }
-  .hud-team-hiit-copy { position: relative; z-index: 1; }
-  .hud-team-hiit-name { margin: 0.35rem 0 0; color: var(--primary); font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; }
-  .hud-team-hiit-name strong { color: var(--foreground); }
-  .hud-team-hiit-ad h2 { margin-top: 0.25rem; font-family: var(--font-heading); font-size: clamp(1.25rem, 3vw, 2rem); letter-spacing: -0.02em; }
-  .hud-team-hiit-description { margin-top: 0.25rem; color: var(--muted-foreground); font-size: 0.75rem; }
-  .hud-team-hiit-action { position: relative; z-index: 1; display: flex; min-width: 9rem; flex-direction: column; align-items: flex-end; gap: 0.25rem; color: var(--muted-foreground); font-family: var(--font-heading); font-size: 0.55rem; letter-spacing: 0.16em; }
-  .hud-team-hiit-action b { color: var(--primary); font-size: 0.7rem; }
-  .hud-team-hiit-arrow { color: var(--foreground); font-size: 2rem; line-height: 1; }
-  @media (max-width: 640px) { .hud-team-hiit-ad { align-items: flex-start; flex-direction: column; gap: 1rem; padding: 1.5rem; }.hud-team-hiit-action { align-items: flex-start; flex-direction: row; gap: 0.75rem; }.hud-team-hiit-arrow { font-size: 1.25rem; } }
+  .hud-team-hiit-ad { display: flex; min-height: 10rem; align-items: stretch; justify-content: space-between; gap: 2rem; padding: 1.25rem 1.5rem; text-align: left; background: radial-gradient(circle at 78% 50%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 28%), linear-gradient(105deg, color-mix(in oklab, var(--background) 90%, var(--primary) 10%), color-mix(in oklab, var(--background) 98%, var(--primary) 2%)); }
+  .hud-team-hiit-logo-wrap { position: relative; z-index: 1; display: grid; min-width: 50%; place-items: center; border-right: 1px solid color-mix(in oklab, var(--primary) 25%, transparent); padding: 0.5rem 2rem 0.5rem 0.5rem; }
+  .hud-team-hiit-logo { display: block; width: 100%; max-width: 29rem; max-height: 8rem; object-fit: contain; }
+  .hud-team-hiit-copy { position: relative; z-index: 1; display: flex; flex: 1; flex-direction: column; justify-content: center; gap: 0.55rem; padding: 0.5rem 0.5rem 0.5rem 0; }
+  .hud-team-hiit-ad h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.15rem, 2.5vw, 1.8rem); letter-spacing: -0.02em; }
+  .hud-team-hiit-description { margin: 0; color: var(--muted-foreground); font-size: 0.75rem; line-height: 1.5; }
+  .hud-team-hiit-cta { color: var(--primary); font-family: var(--font-heading); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.14em; }
+  .hud-team-hiit-cta span { margin-left: 0.35rem; font-size: 1rem; }
+  @media (max-width: 640px) { .hud-team-hiit-ad { align-items: stretch; flex-direction: column; gap: 1rem; padding: 1.25rem; }.hud-team-hiit-logo-wrap { min-width: 0; border-right: 0; border-bottom: 1px solid color-mix(in oklab, var(--primary) 25%, transparent); padding: 0.25rem 0 1rem; }.hud-team-hiit-logo { max-height: 5rem; }.hud-team-hiit-copy { padding: 0; } }
   .hud-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); padding-bottom: 1rem; }.hud-section-heading h2 { margin-top: 0.45rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }.hud-link { font-size: 0.6rem; }
 @media (max-width: 767px) { .hud-orbit-panel { min-height: 16rem; border-left: 0; border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); }.hud-frame-top, .hud-frame-bottom { font-size: 0.47rem; }.hud-section-heading { align-items: start; flex-direction: column; } }
