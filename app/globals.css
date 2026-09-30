@@ -72,8 +72,8 @@
   }
   body {
     @apply bg-background font-sans text-foreground;
-    background-image: linear-gradient(oklch(0.78 0.17 205 / 0.06) 1px, transparent 1px), linear-gradient(90deg, oklch(0.78 0.17 205 / 0.06) 1px, transparent 1px), radial-gradient(circle at 50% -20%, oklch(0.35 0.12 220 / 0.22), transparent 48%);
-    background-size: 48px 48px, 48px 48px, auto;
+    background-image: radial-gradient(ellipse at 50% -18%, oklch(0.42 0.16 215 / 0.34), transparent 52%), radial-gradient(ellipse at 8% 28%, oklch(0.22 0.12 238 / 0.2), transparent 34%), radial-gradient(ellipse at 92% 72%, oklch(0.2 0.1 190 / 0.18), transparent 36%), linear-gradient(145deg, oklch(0.08 0.035 240), oklch(0.045 0.02 240) 52%, oklch(0.075 0.035 210));
+    background-attachment: fixed;
   }
   h1,
   h2,
@@ -154,5 +154,23 @@
 .hud-panel p { margin-top: 0.55rem; }.hud-panel p b { color: var(--primary); }
 .hud-status { display: flex; align-items: center; gap: 0.9rem; margin-top: 1rem; }.hud-status strong { font-family: var(--font-heading); font-size: 0.75rem; letter-spacing: 0.08em; }.hud-status p { margin-top: 0.25rem; font-size: 0.6rem; }.hud-status-ring { display: grid; place-items: center; width: 3.6rem; height: 3.6rem; border: 2px solid var(--primary); border-radius: 50%; color: var(--primary); font-family: var(--font-heading); font-size: 1.1rem; box-shadow: 0 0 14px color-mix(in oklab, var(--primary) 30%, transparent); }
 .hud-scanline { height: 1px; margin-top: 1rem; background: var(--primary); box-shadow: 0 -5px 0 color-mix(in oklab, var(--primary) 25%, transparent), 0 5px 0 color-mix(in oklab, var(--primary) 15%, transparent); }
-.hud-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); padding-bottom: 1rem; }.hud-section-heading h2 { margin-top: 0.45rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }.hud-link { font-size: 0.6rem; }
+  .hud-ad-slot { position: relative; display: grid; min-height: 7rem; place-items: center; overflow: hidden; border: 1px dashed color-mix(in oklab, var(--primary) 35%, transparent); background: color-mix(in oklab, var(--background) 94%, var(--primary) 6%); color: var(--muted-foreground); text-align: center; }
+  .hud-ad-slot::before, .hud-ad-slot::after { position: absolute; content: ''; pointer-events: none; }
+  .hud-ad-slot::before { inset: 0; background: linear-gradient(115deg, transparent 20%, color-mix(in oklab, var(--primary) 5%, transparent) 50%, transparent 80%); }
+  .hud-ad-slot::after { inset: 0.35rem; border: 1px solid color-mix(in oklab, var(--primary) 10%, transparent); }
+  .hud-ad-slot p, .hud-ad-label, .hud-ad-size { position: relative; z-index: 1; }
+  .hud-ad-slot p { margin: 0; font-family: var(--font-heading); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; }
+  .hud-ad-label, .hud-ad-size { position: absolute; top: 0.7rem; color: color-mix(in oklab, var(--primary) 75%, var(--muted-foreground)); font-family: var(--font-heading); font-size: 0.5rem; letter-spacing: 0.16em; }
+  .hud-ad-label { left: 0.8rem; }.hud-ad-size { right: 0.8rem; }
+  .hud-team-hiit-ad { display: flex; min-height: 8.5rem; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.75rem 2rem; text-align: left; background: radial-gradient(circle at 78% 50%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 28%), linear-gradient(105deg, color-mix(in oklab, var(--background) 90%, var(--primary) 10%), color-mix(in oklab, var(--background) 98%, var(--primary) 2%)); }
+  .hud-team-hiit-copy { position: relative; z-index: 1; }
+  .hud-team-hiit-name { margin: 0.35rem 0 0; color: var(--primary); font-family: var(--font-heading); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; }
+  .hud-team-hiit-name strong { color: var(--foreground); }
+  .hud-team-hiit-ad h2 { margin-top: 0.25rem; font-family: var(--font-heading); font-size: clamp(1.25rem, 3vw, 2rem); letter-spacing: -0.02em; }
+  .hud-team-hiit-description { margin-top: 0.25rem; color: var(--muted-foreground); font-size: 0.75rem; }
+  .hud-team-hiit-action { position: relative; z-index: 1; display: flex; min-width: 9rem; flex-direction: column; align-items: flex-end; gap: 0.25rem; color: var(--muted-foreground); font-family: var(--font-heading); font-size: 0.55rem; letter-spacing: 0.16em; }
+  .hud-team-hiit-action b { color: var(--primary); font-size: 0.7rem; }
+  .hud-team-hiit-arrow { color: var(--foreground); font-size: 2rem; line-height: 1; }
+  @media (max-width: 640px) { .hud-team-hiit-ad { align-items: flex-start; flex-direction: column; gap: 1rem; padding: 1.5rem; }.hud-team-hiit-action { align-items: flex-start; flex-direction: row; gap: 0.75rem; }.hud-team-hiit-arrow { font-size: 1.25rem; } }
+  .hud-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent); padding-bottom: 1rem; }.hud-section-heading h2 { margin-top: 0.45rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }.hud-link { font-size: 0.6rem; }
 @media (max-width: 767px) { .hud-orbit-panel { min-height: 16rem; border-left: 0; border-top: 1px solid color-mix(in oklab, var(--primary) 30%, transparent); }.hud-frame-top, .hud-frame-bottom { font-size: 0.47rem; }.hud-section-heading { align-items: start; flex-direction: column; } }

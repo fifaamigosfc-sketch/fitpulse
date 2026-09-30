@@ -50,10 +50,20 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-6xl gap-3 px-4 sm:px-6 md:grid-cols-3" aria-label="Resumo do sistema">
-        <HudPanel label="CALORIAS // DAILY"><div className="hud-metric"><strong>2.240</strong><span>KCAL ESTIMADAS</span></div><div className="hud-bars"><i /><i /><i /><i /><i /><i /><i /></div></HudPanel>
-        <HudPanel label="COMPOSIÇÃO // BODY"><div className="hud-metric"><strong>68.4</strong><span>KG ATUAL</span></div><div className="hud-line"><span style={{ width: '72%' }} /></div><p>Progresso consistente <b>+12%</b></p></HudPanel>
-        <HudPanel label="STATUS // SYSTEM"><div className="hud-status"><span className="hud-status-ring">98</span><div><strong>EM EVOLUÇÃO</strong><p>Todos os sistemas ativos</p></div></div><div className="hud-scanline" /></HudPanel>
+      <section className="mx-auto w-full max-w-6xl px-4 sm:px-6" aria-labelledby="team-hiit-ad-title">
+        <div className="hud-ad-slot hud-team-hiit-ad">
+          <div className="hud-team-hiit-copy">
+            <span className="hud-ad-label">APRESENTA</span>
+            <p className="hud-team-hiit-name">TEAM <strong>HIIT</strong></p>
+            <h2 id="team-hiit-ad-title">Entre em forma do seu jeito.</h2>
+            <p className="hud-team-hiit-description">Treinos rápidos, intensos e adaptados à sua rotina.</p>
+          </div>
+          <div className="hud-team-hiit-action" aria-hidden="true">
+            <span>SEU RITMO</span>
+            <b>SEU TREINO</b>
+            <span className="hud-team-hiit-arrow">→</span>
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6" aria-labelledby="principais-ferramentas">
