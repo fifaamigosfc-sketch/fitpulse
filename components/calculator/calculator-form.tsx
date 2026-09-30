@@ -28,7 +28,7 @@ export function CalculatorForm({ onCalculate, onReset, children, submitLabel = '
       <div className="flex flex-col gap-2 sm:flex-row">
         <button
           type="submit"
-          className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground shadow-[0_0_20px_oklch(0.82_0.19_132/0.14)] transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_0_26px_oklch(0.82_0.19_132/0.28)]"
         >
           <Calculator className="size-4.5" aria-hidden="true" />
           {submitLabel}

@@ -20,9 +20,10 @@ const featuredTools = tools.slice(0, 3)
 export default function Page() {
   return (
     <div className="flex flex-col gap-16 pb-16">
-      <section className="border-b bg-accent/35">
+      <section className="relative overflow-hidden border-b border-primary/15 bg-background/80">
+        <div className="pointer-events-none absolute -right-24 top-8 size-80 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-16 sm:px-6 lg:py-24">
-          <p className="text-sm font-semibold tracking-wide text-primary uppercase">Métrica Fit</p>
+          <p className="flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-primary uppercase"><span className="size-2 rounded-full bg-primary shadow-[0_0_12px_oklch(0.82_0.19_132/0.8)]" aria-hidden="true" />Métrica Fit <span className="text-muted-foreground/70">/ 01</span></p>
           <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">Ferramentas Fitness Gratuitas</h1>
           <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Calculadoras gratuitas para calorias, nutrição, composição corporal, musculação e corrida — sem cadastro e com resultados fáceis de entender.
