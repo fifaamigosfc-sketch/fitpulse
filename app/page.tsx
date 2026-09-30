@@ -51,9 +51,9 @@ export default function Page() {
       </section>
 
       <section className="mx-auto grid w-full max-w-6xl gap-3 px-4 sm:px-6 md:grid-cols-3" aria-label="Resumo do sistema">
-        <HudPanel label="CALORIAS // DAILY"><div className="hud-metric"><strong>2.240</strong><span>KCAL ESTIMADAS</span></div><div className="hud-bars"><i /><i /><i /><i /><i /><i /><i /></div></HudPanel>
-        <HudPanel label="COMPOSIÇÃO // BODY"><div className="hud-metric"><strong>68.4</strong><span>KG ATUAL</span></div><div className="hud-line"><span style={{ width: '72%' }} /></div><p>Progresso consistente <b>+12%</b></p></HudPanel>
-        <HudPanel label="STATUS // SYSTEM"><div className="hud-status"><span className="hud-status-ring">98</span><div><strong>EM EVOLUÇÃO</strong><p>Todos os sistemas ativos</p></div></div><div className="hud-scanline" /></HudPanel>
+        <HudPanel label="CALORIAS DIÁRIAS"><div className="hud-metric"><strong>2.240</strong><span>kcal estimadas</span></div><div className="hud-bars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div></HudPanel>
+        <HudPanel label="PESO ATUAL"><div className="hud-metric"><strong>68,4</strong><span>kg registrados</span></div><div className="hud-line" aria-hidden="true"><span style={{ width: '72%' }} /></div><p>Progresso consistente <b>+12%</b></p></HudPanel>
+        <HudPanel label="STATUS DO SISTEMA"><div className="hud-status"><span className="hud-status-ring" aria-label="98 por cento">98</span><div><strong>EM EVOLUÇÃO</strong><p>Todos os sistemas ativos</p></div></div><div className="hud-scanline" aria-hidden="true" /></HudPanel>
       </section>
 
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6" aria-labelledby="principais-ferramentas">
