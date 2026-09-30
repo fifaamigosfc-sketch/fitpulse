@@ -164,7 +164,7 @@
   .hud-ad-label { left: 0.8rem; }.hud-ad-size { right: 0.8rem; }
   .hud-team-hiit-ad { display: flex; min-height: 10rem; align-items: stretch; justify-content: space-between; gap: 2rem; padding: 1.25rem 1.5rem; text-align: left; background: radial-gradient(circle at 78% 50%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 28%), linear-gradient(105deg, color-mix(in oklab, var(--background) 90%, var(--primary) 10%), color-mix(in oklab, var(--background) 98%, var(--primary) 2%)); }
   .hud-team-hiit-logo-wrap { position: relative; z-index: 1; display: grid; min-width: 50%; place-items: center; border-right: 1px solid color-mix(in oklab, var(--primary) 25%, transparent); padding: 0.5rem 2rem 0.5rem 0.5rem; }
-  .hud-team-hiit-logo { display: block; width: 100%; max-width: 29rem; max-height: 8rem; object-fit: contain; }
+  .hud-team-hiit-logo { display: block; width: 100%; max-width: 29rem; max-height: 8rem; object-fit: contain; mix-blend-mode: screen; }
   .hud-team-hiit-copy { position: relative; z-index: 1; display: flex; flex: 1; flex-direction: column; justify-content: center; gap: 0.55rem; padding: 0.5rem 0.5rem 0.5rem 0; }
   .hud-team-hiit-ad h2 { margin: 0; font-family: var(--font-heading); font-size: clamp(1.15rem, 2.5vw, 1.8rem); letter-spacing: -0.02em; }
   .hud-team-hiit-description { margin: 0; color: var(--muted-foreground); font-size: 0.75rem; line-height: 1.5; }
