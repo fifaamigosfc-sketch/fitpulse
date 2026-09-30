@@ -50,11 +50,19 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 sm:px-6" aria-label="Espaço publicitário">
-        <div className="hud-ad-slot">
-          <span className="hud-ad-label">PUBLICIDADE</span>
-          <p>Espaço reservado para anúncio</p>
-          <span className="hud-ad-size">728 × 90</span>
+      <section className="mx-auto w-full max-w-6xl px-4 sm:px-6" aria-labelledby="team-hiit-ad-title">
+        <div className="hud-ad-slot hud-team-hiit-ad">
+          <div className="hud-team-hiit-copy">
+            <span className="hud-ad-label">APRESENTA</span>
+            <p className="hud-team-hiit-name">TEAM <strong>HIIT</strong></p>
+            <h2 id="team-hiit-ad-title">Entre em forma do seu jeito.</h2>
+            <p className="hud-team-hiit-description">Treinos rápidos, intensos e adaptados à sua rotina.</p>
+          </div>
+          <div className="hud-team-hiit-action" aria-hidden="true">
+            <span>SEU RITMO</span>
+            <b>SEU TREINO</b>
+            <span className="hud-team-hiit-arrow">→</span>
+          </div>
         </div>
       </section>
 
