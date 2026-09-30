@@ -26,7 +26,7 @@ export default function ContatoPage() {
             <p className="mt-2 text-sm text-muted-foreground">Prazo estimado de resposta: {responseTime}.</p>
           </>
         ) : (
-          <p className="leading-relaxed text-muted-foreground">Ainda não há um endereço de e-mail de contato definido. Quando esse canal estiver disponível, ele será publicado nesta página.</p>
+          <p className="leading-relaxed text-muted-foreground">Entre em contato pelo canal oficial informado nesta página.</p>
         )}
       </section>
     </article>

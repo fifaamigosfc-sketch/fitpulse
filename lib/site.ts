@@ -8,7 +8,7 @@ export const siteConfig = {
   description:
     'Calculadoras fitness gratuitas para calorias, nutrição, composição corporal, treino e corrida. Sem cadastro e com os cálculos feitos no seu navegador.',
   /** Domínio definitivo do site. Defina NEXT_PUBLIC_SITE_URL no deploy. */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://metricafit.com.br').replace(/\/$/, ''),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')).replace(/\/$/, ''),
   locale: 'pt_BR',
   language: 'pt-BR',
   /** Quem mantém o site. */
@@ -18,8 +18,7 @@ export const siteConfig = {
     url: 'https://blog.teamhiit.com.br',
   },
   contact: {
-    /** Deixe vazio até ter um e-mail definitivo. A página de contato se adapta. */
-    email: '',
+    email: 'contato@renangoncalves.com.br',
     responseTime: 'até 5 dias úteis',
   },
   legal: {
