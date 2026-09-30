@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { CategorySection } from '@/components/tools/category-section'
@@ -17,15 +16,7 @@ export const metadata: Metadata = {
 }
 
 const featuredTools = tools.slice(0, 5)
-
-function HudPanel({ label, children, className = '' }: { label: string; children: React.ReactNode; className?: string }) {
-  return (
-    <div className={`hud-panel ${className}`}>
-      <div className="hud-panel-label"><span className="hud-dot" />{label}</div>
-      {children}
-    </div>
-  )
-}
+const secondaryTools = tools.slice(5, 11)
 
 export default function Page() {
   return (
@@ -71,12 +62,21 @@ export default function Page() {
         </a>
       </section>
 
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6" aria-labelledby="principais-ferramentas">
-        <div className="hud-section-heading"><div><p className="hud-kicker">// MÓDULOS DISPONÍVEIS</p><h2 id="principais-ferramentas">Ferramentas de precisão</h2></div><Link href="/ferramentas/" className="hud-link">VER TODAS <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">{featuredTools.map((tool) => <li key={tool.slug}><ToolCard tool={tool} headingLevel="h3" /></li>)}</ul>
+      <section className="reference-tools-section mx-auto w-full max-w-6xl px-4 sm:px-6" aria-labelledby="principais-ferramentas">
+        <div className="hud-section-heading"><div><p className="hud-kicker">FERRAMENTAS EM DESTAQUE</p><h2 id="principais-ferramentas">Principais Ferramentas</h2></div><Link href="/ferramentas/" className="hud-link">Ver todas as ferramentas <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
+        <ul className="reference-tool-grid">{featuredTools.map((tool) => <li key={tool.slug}><ToolCard tool={tool} headingLevel="h3" /></li>)}</ul>
+        <ul className="reference-tool-grid reference-tool-grid-secondary">{secondaryTools.map((tool) => <li key={tool.slug}><ToolCard tool={tool} headingLevel="h3" /></li>)}</ul>
       </section>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6">{categories.map((category) => <CategorySection key={category.slug} category={category} />)}</div>
+      <section className="reference-previews mx-auto w-full max-w-6xl px-4 sm:px-6" aria-label="Pré-visualizações da plataforma">
+        <div className="preview-panel preview-calculator"><span>CALCULADORA DE TDEE</span><strong>Resultados claros para seus objetivos</strong><div className="preview-lines" /></div>
+        <div className="preview-panel preview-categories"><span>CATEGORIAS</span><strong>Explore por categoria</strong><div className="preview-mini-grid"><i /><i /><i /><i /></div></div>
+        <div className="preview-panel preview-mobile"><span>TEAM HIIT // MOBILE</span><strong>Treine do seu jeito.</strong><div className="preview-phone" /></div>
+        <div className="preview-panel preview-about"><span>SOBRE A MÉTRICA FIT</span><strong>Nossa missão é ajudar você a evoluir.</strong><p>Informação prática para uma rotina mais saudável e consistente.</p></div>
+        <div className="preview-panel preview-nutrition"><span>NUTRIÇÃO</span><strong>Ferramentas para melhorar sua alimentação.</strong></div>
+      </section>
+
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6">{categories.slice(0, 1).map((category) => <CategorySection key={category.slug} category={category} />)}</div>
     </div>
   )
 }
