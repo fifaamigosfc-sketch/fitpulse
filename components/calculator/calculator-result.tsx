@@ -20,8 +20,8 @@ export function CalculatorResult({ show, label, value, unit, caption, stats, war
   return (
     <div aria-live="polite" aria-atomic="true">
       {show && (
-        <section aria-label="Resultado" className="mt-6 flex flex-col gap-5 border-t pt-6">
-          <div className="rounded-xl bg-accent p-5 sm:p-6">
+        <section aria-label="Resultado" className="mt-6 flex flex-col gap-5 border-t border-primary/20 pt-6">
+          <div className="relative overflow-hidden rounded-xl border border-primary/25 bg-accent p-5 shadow-[0_0_30px_oklch(0.82_0.19_132/0.08)] sm:p-6">
             <p className="text-sm font-medium text-accent-foreground">{label}</p>
             <p className="mt-1 flex items-baseline gap-2 font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               <span>{value}</span>
