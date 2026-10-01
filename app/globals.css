@@ -63,6 +63,15 @@
   --radius: 0.35rem;
 }
 
+.tools-hero { background: radial-gradient(circle at 78% 25%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 28%), linear-gradient(135deg, color-mix(in oklab, var(--card) 94%, var(--primary)), var(--background)); box-shadow: inset 0 1px 0 color-mix(in oklab, white 10%, transparent), 0 20px 60px color-mix(in oklab, black 25%, transparent); }
+.tools-hero::after { position: absolute; right: -8rem; bottom: -10rem; width: 26rem; height: 26rem; border: 1px solid color-mix(in oklab, var(--primary) 22%, transparent); border-radius: 50%; box-shadow: 0 0 0 2rem color-mix(in oklab, var(--primary) 5%, transparent), 0 0 0 5rem color-mix(in oklab, var(--primary) 3%, transparent); content: ''; }
+.tools-hero-orbit { position: absolute; top: 50%; right: 12%; display: flex; width: 12rem; height: 12rem; align-items: center; justify-content: center; border: 1px solid color-mix(in oklab, var(--primary) 45%, transparent); border-radius: 50%; transform: translateY(-50%) rotate(-10deg); }
+.tools-hero-orbit::before { position: absolute; inset: 1.3rem; border: 1px dashed color-mix(in oklab, var(--primary) 32%, transparent); border-radius: 50%; content: ''; }
+.tools-hero-orbit span { position: absolute; color: var(--muted-foreground); font-family: var(--font-heading); font-size: 0.5rem; letter-spacing: 0.16em; }.tools-hero-orbit span:first-of-type { top: 1rem; }.tools-hero-orbit span:last-of-type { bottom: 1rem; }
+.tools-stats { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid var(--border); border-radius: 1rem; background: color-mix(in oklab, var(--card) 78%, transparent); }.tools-stats > div { display: flex; min-height: 5.25rem; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; }.tools-stats > div + div { border-left: 1px solid var(--border); }.tools-stats strong { font-family: var(--font-heading); font-size: 1.6rem; color: var(--foreground); }.tools-stats span { color: var(--muted-foreground); font-size: 0.75rem; line-height: 1.3; }.calculator-page > section[aria-labelledby='calculadora'] { border-color: color-mix(in oklab, var(--primary) 30%, var(--border)); background: linear-gradient(145deg, color-mix(in oklab, var(--card) 96%, var(--primary)), var(--card)); box-shadow: 0 22px 60px color-mix(in oklab, black 22%, transparent); }
+.calculator-page .calculator-form input, .calculator-page .calculator-form select { min-height: 3rem; border-radius: 0.75rem; background: color-mix(in oklab, var(--background) 75%, var(--card)); }
+@media (max-width: 700px) { .tools-hero-orbit { top: auto; right: -2rem; bottom: -2rem; transform: scale(0.65); }.tools-stats { grid-template-columns: 1fr; }.tools-stats > div + div { border-top: 1px solid var(--border); border-left: 0; } }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

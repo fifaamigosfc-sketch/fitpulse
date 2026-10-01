@@ -18,7 +18,7 @@ export function CalculatorForm({ onCalculate, onReset, children, submitLabel = '
   }
 
   return (
-    <form onSubmit={handleSubmit} onReset={onReset} noValidate className="flex flex-col gap-5">
+    <form onSubmit={handleSubmit} onReset={onReset} noValidate className="calculator-form flex flex-col gap-6">
       <div className="grid gap-4 sm:grid-cols-2">{children}</div>
       {formError && (
         <p role="alert" className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive">
