@@ -35,7 +35,7 @@ export function CalculatorForm({ onCalculate, onReset, children, submitLabel = '
         </button>
         <button
           type="reset"
-          className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-input bg-card px-5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-lg border border-input bg-card px-5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
         >
           <RotateCcw className="size-4" aria-hidden="true" />
           Limpar
