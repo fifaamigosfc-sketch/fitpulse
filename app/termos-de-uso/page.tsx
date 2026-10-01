@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Termos de Uso',
-  description: 'Consulte os termos para utilização das calculadoras fitness gratuitas do Métrica Fit.',
+  description: 'Consulte os termos para utilização das calculadoras fitness gratuitas do Fique Fit.',
   path: '/termos-de-uso/',
 })
 

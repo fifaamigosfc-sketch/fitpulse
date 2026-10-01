@@ -32,7 +32,7 @@ export default function Page() {
     <div className="flex flex-col gap-10 pb-16">
       <section className="mx-auto w-full max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12" aria-labelledby="hero-title">
         <div className="hud-frame">
-          <div className="hud-frame-top"><span>METRICA.FIT // SISTEMA DE INTELIGÊNCIA FITNESS</span><span>STATUS: <b>ONLINE</b></span></div>
+          <div className="hud-frame-top"><span>FIQUE FIT // SISTEMA DE INTELIGÊNCIA FITNESS</span><span>STATUS: <b>ONLINE</b></span></div>
           <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
             <div className="hud-hero-main">
               <p className="hud-kicker">// CENTRAL DE PERFORMANCE <span>MF-01</span></p>

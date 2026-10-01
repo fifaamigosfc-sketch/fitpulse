@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Política de Cookies',
-  description: 'Entenda como cookies e tecnologias semelhantes são tratados no Métrica Fit.',
+  description: 'Entenda como cookies e tecnologias semelhantes são tratados no Fique Fit.',
   path: '/politica-de-cookies/',
 })
 

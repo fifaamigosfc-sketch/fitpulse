@@ -3,7 +3,7 @@
  * Edite os valores abaixo para definir domínio, responsável e canais de contato.
  */
 export const siteConfig = {
-  name: 'Métrica Fit',
+  name: 'Fique Fit',
   tagline: 'Ferramentas fitness gratuitas',
   description:
     'Calculadoras fitness gratuitas para calorias, nutrição, composição corporal, treino e corrida. Sem cadastro e com os cálculos feitos no seu navegador.',
