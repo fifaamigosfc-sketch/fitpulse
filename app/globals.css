@@ -72,6 +72,20 @@
 .calculator-page .calculator-form input, .calculator-page .calculator-form select { min-height: 3rem; border-radius: 0.75rem; background: color-mix(in oklab, var(--background) 75%, var(--card)); }
 @media (max-width: 700px) { .tools-hero-orbit { top: auto; right: -2rem; bottom: -2rem; transform: scale(0.65); }.tools-stats { grid-template-columns: 1fr; }.tools-stats > div + div { border-top: 1px solid var(--border); border-left: 0; } }
 
+.tools-discovery { display: flex; flex-direction: column; gap: 1.25rem; }
+.tools-discovery-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.1rem; }
+.tools-discovery-heading h2 { margin-top: 0.45rem; font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -0.04em; }
+.tools-discovery-heading p:not(.hud-kicker) { margin-top: 0.45rem; color: var(--muted-foreground); font-size: 0.86rem; }
+.tools-featured-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 0.9rem; list-style: none; padding: 0; }
+.tools-featured-main .tool-card { min-height: 17rem; border-color: color-mix(in oklab, var(--primary) 45%, var(--border)); background: radial-gradient(circle at 80% 10%, color-mix(in oklab, var(--primary) 16%, transparent), transparent 38%), var(--card); }
+.tools-featured-main .tool-card > span:first-child { background: var(--primary); color: var(--primary-foreground); }
+.quick-tools-row { display: grid; grid-template-columns: 13rem 1fr; gap: 1rem; align-items: stretch; }
+.quick-tools-label { display: flex; flex-direction: column; justify-content: center; border: 1px solid color-mix(in oklab, var(--primary) 28%, var(--border)); border-radius: 1rem; background: color-mix(in oklab, var(--card) 82%, var(--primary) 18%); padding: 1.25rem; }
+.quick-tools-label span { color: var(--primary); font-family: var(--font-heading); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.16em; }.quick-tools-label strong { margin-top: 0.45rem; font-family: var(--font-heading); font-size: 1.2rem; }.quick-tools-label p { margin-top: 0.35rem; color: var(--muted-foreground); font-size: 0.72rem; }
+.quick-tools-row ul { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; list-style: none; padding: 0; }.quick-tools-row .tool-card { min-height: 11rem; padding: 1rem; gap: 0.65rem; border-radius: 1rem; }.quick-tools-row .tool-card p { display: none; }.quick-tools-row .tool-card > span:first-child { width: 2.25rem; height: 2.25rem; }
+@media (max-width: 800px) { .tools-discovery-heading { align-items: start; flex-direction: column; }.tools-featured-grid { grid-template-columns: 1fr 1fr; }.tools-featured-main { grid-column: span 2; }.quick-tools-row { grid-template-columns: 1fr; }.quick-tools-row ul { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .tools-featured-grid { grid-template-columns: 1fr; }.tools-featured-main { grid-column: auto; }.quick-tools-row ul { grid-template-columns: 1fr 1fr; }.quick-tools-row .tool-card { min-height: 9rem; } }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
