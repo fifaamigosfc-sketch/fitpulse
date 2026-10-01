@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowDown, ArrowRight, Calculator, ShieldCheck, Sparkles } from 'lucide-react'
 import { CategorySection } from '@/components/tools/category-section'
 import { ToolCard } from '@/components/tools/tool-card'
 import { categories } from '@/lib/tools/categories'
@@ -18,36 +17,22 @@ export const metadata: Metadata = {
 
 const featuredTools = tools.slice(0, 3)
 
-function HudPanel({ label, children, className = '' }: { label: string; children: React.ReactNode; className?: string }) {
-  return (
-    <div className={`hud-panel ${className}`}>
-      <div className="hud-panel-label"><span className="hud-dot" />{label}</div>
-      {children}
-    </div>
-  )
-}
-
 export default function Page() {
   return (
     <div className="flex flex-col gap-10 pb-16">
       <section className="mx-auto w-full max-w-6xl px-4 pt-8 sm:px-6 lg:pt-12" aria-labelledby="hero-title">
-        <div className="hud-frame">
-          <div className="hud-frame-top"><span>FIQUE FIT // SISTEMA DE INTELIGÊNCIA FITNESS</span><span>STATUS: <b>ONLINE</b></span></div>
-          <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
-            <div className="hud-hero-main">
-              <p className="hud-kicker">// CENTRAL DE PERFORMANCE <span>MF-01</span></p>
-              <h1 id="hero-title">SEUS DADOS.<br /><strong>SUA EVOLUÇÃO.</strong></h1>
-              <p className="max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">Monitore, calcule e compreenda o que move seu corpo. Um painel de ferramentas objetivas para decisões melhores no treino.</p>
-              <Link href="/ferramentas/" className="hud-button">ABRIR PAINEL <ArrowRight className="size-4" aria-hidden="true" /></Link>
-            </div>
-            <div className="hud-orbit-panel" aria-hidden="true">
-              <div className="hud-orbit"><div className="hud-orbit-core">FIT<br /><span>SYS</span></div></div>
-              <span className="hud-orbit-caption top-8 right-8">LIVE DATA<br /><b>ACTIVE</b></span>
-              <span className="hud-orbit-caption bottom-8 left-8">PROGRESS<br /><b>SYNCED</b></span>
-            </div>
+        <div className="tools-home-hero relative overflow-hidden rounded-3xl border border-primary/25 p-6 sm:p-10 lg:p-14">
+          <div className="relative z-10 max-w-2xl">
+            <p className="mb-4 inline-flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-primary uppercase"><Sparkles className="size-4" aria-hidden="true" /> FIQUE FIT // FERRAMENTAS</p>
+            <h1 id="hero-title" className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Seu próximo nível começa com <span className="text-primary">dados claros.</span></h1>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">Calculadoras gratuitas para entender seu corpo, ajustar sua rotina e treinar com mais confiança.</p>
+            <a href="#principais-ferramentas" className="mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-0.5">Explorar ferramentas <ArrowDown className="size-4" aria-hidden="true" /></a>
           </div>
-          <div className="hud-frame-bottom"><span>PRECISION / CLARITY / PROGRESS</span><span>v.2.026</span></div>
+          <div className="tools-hero-orbit" aria-hidden="true"><Calculator className="size-16 text-primary" /><span>PRECISÃO</span><span>PROGRESSO</span></div>
         </div>
+        <section className="tools-stats" aria-label="Resumo das ferramentas">
+          <div><strong>{tools.length}</strong><span>ferramentas gratuitas</span></div><div><strong>{categories.length}</strong><span>áreas do seu treino</span></div><div><ShieldCheck className="size-5 text-primary" /><span>sem cadastro e sem envio de dados</span></div>
+        </section>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 sm:px-6" aria-labelledby="team-hiit-ad-title">
