@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = buildMetadata({
   title: `Sobre o ${siteConfig.name}`,
-  description: 'Conheça o objetivo do Métrica Fit e sua proposta de oferecer ferramentas fitness gratuitas e informativas.',
+  description: 'Conheça o objetivo do Fique Fit e sua proposta de oferecer ferramentas fitness gratuitas e informativas.',
   path: '/sobre/',
 })
 

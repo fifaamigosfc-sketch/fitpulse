@@ -16,7 +16,7 @@ export default function ToolsPage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 py-12 sm:px-6 lg:py-16">
       <header className="flex max-w-3xl flex-col gap-4">
-        <p className="text-sm font-semibold tracking-wide text-primary uppercase">Métrica Fit</p>
+        <p className="text-sm font-semibold tracking-wide text-primary uppercase">Fique Fit</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Calculadoras e Ferramentas Fitness</h1>
         <p className="text-lg leading-relaxed text-muted-foreground">
           Explore todas as nossas ferramentas gratuitas para acompanhar sua alimentação, composição corporal e evolução nos treinos.

@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Política de Privacidade',
-  description: 'Saiba como o Métrica Fit trata informações ao oferecer calculadoras fitness gratuitas.',
+  description: 'Saiba como o Fique Fit trata informações ao oferecer calculadoras fitness gratuitas.',
   path: '/politica-de-privacidade/',
 })
 
