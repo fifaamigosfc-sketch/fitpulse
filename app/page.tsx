@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 }
 
 const featuredTools = tools.slice(0, 3)
+const quickTools = tools.slice(3, 7)
 
 export default function Page() {
   return (
@@ -56,9 +57,10 @@ export default function Page() {
         </a>
       </section>
 
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6" aria-labelledby="principais-ferramentas">
-        <div className="hud-section-heading"><div><p className="hud-kicker">// MÓDULOS DISPONÍVEIS</p><h2 id="principais-ferramentas">Ferramentas de precisão</h2></div><Link href="/ferramentas/" className="hud-link">VER TODAS <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{featuredTools.map((tool) => <li key={tool.slug}><ToolCard tool={tool} headingLevel="h3" /></li>)}</ul>
+      <section id="principais-ferramentas" className="tools-discovery mx-auto w-full max-w-6xl px-4 sm:px-6" aria-labelledby="principais-ferramentas-title">
+        <div className="tools-discovery-heading"><div><p className="hud-kicker">// COMECE PELO SEU OBJETIVO</p><h2 id="principais-ferramentas-title">Encontre sua ferramenta</h2><p>Escolha uma calculadora e transforme seus dados em uma próxima ação.</p></div><Link href="/categorias/" className="hud-link">VER CATEGORIAS <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
+        <ul className="tools-featured-grid">{featuredTools.map((tool, index) => <li key={tool.slug} className={index === 0 ? 'tools-featured-main' : ''}><ToolCard tool={tool} headingLevel="h3" /></li>)}</ul>
+        <div className="quick-tools-row"><div className="quick-tools-label"><span>ATÉ 2 MINUTOS</span><strong>Resultados rápidos</strong><p>Sem cadastro. Sem complicação.</p></div><ul>{quickTools.map((tool) => <li key={tool.slug}><ToolCard tool={tool} headingLevel="h3" /></li>)}</ul></div>
       </section>
 
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6">{categories.map((category) => <CategorySection key={category.slug} category={category} />)}</div>
