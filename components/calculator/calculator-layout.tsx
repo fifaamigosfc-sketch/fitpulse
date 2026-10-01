@@ -29,7 +29,7 @@ export function CalculatorLayout({ tool, content, calculator }: CalculatorLayout
   const path = toolPath(tool.slug)
 
   return (
-    <article className="mx-auto flex max-w-3xl flex-col px-4 py-8 sm:px-6 sm:py-10">
+    <article className="calculator-page mx-auto flex max-w-5xl flex-col px-4 py-8 sm:px-6 sm:py-10">
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },

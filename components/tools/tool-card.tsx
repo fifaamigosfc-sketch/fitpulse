@@ -7,7 +7,7 @@ export function ToolCard({ tool, headingLevel = 'h3' }: { tool: Tool; headingLev
   const Icon = tool.icon
   const Heading = headingLevel
   return (
-    <article className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-xl border border-border/80 bg-card p-5 shadow-[0_12px_35px_oklch(0_0_0/0.15)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/55 hover:shadow-[0_16px_40px_oklch(0_0_0/0.28),0_0_24px_oklch(0.82_0.19_132/0.08)]">
+    <article className="tool-card group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-border/80 bg-card/90 p-5 shadow-[0_16px_45px_oklch(0_0_0/0.18)] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:bg-card hover:shadow-[0_20px_48px_oklch(0_0_0/0.3),0_0_28px_oklch(0.78_0.17_205/0.12)]">
       <span className="flex size-10 items-center justify-center rounded-lg bg-accent text-accent-foreground" aria-hidden="true">
         <Icon className="size-5" />
       </span>
