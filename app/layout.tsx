@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Sora } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { SiteAnalytics } from '@/components/site/site-analytics'
 import { SiteFooter } from '@/components/site/site-footer'
 import { SiteHeader } from '@/components/site/site-header'
@@ -7,7 +7,6 @@ import { siteConfig } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
-const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap', weight: ['600', '700'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -34,7 +33,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${sora.variable}`}>
+    <html lang="pt-BR" className={inter.variable}>
       <body className="flex min-h-dvh flex-col antialiased">
         <a
           href="#conteudo"
